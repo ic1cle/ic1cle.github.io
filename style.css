@@ -209,7 +209,7 @@ body {
   /* Main Content Styles */
   
   main {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     display: flex;
@@ -223,7 +223,7 @@ body {
     padding: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
-    flex-basis: calc(50% - 10px);
+    flex-basis: calc(100% - 10px);
   }
   
   .promo h3, .about h3 {
