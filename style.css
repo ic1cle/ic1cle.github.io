@@ -175,7 +175,7 @@ body {
   
   .hamburger-line {
     height: 2px;
-    background-color: #000;
+    background-color: #1b1a1a;
   }
   
   @media (max-width: 768px) {
