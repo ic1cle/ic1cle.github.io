@@ -7,11 +7,9 @@
   <meta name="author" content="Sigurd S. Osen">
   <meta name="contact" content="sigsos1@gotmail.com"
   
-  <title>Vikåsen Volley Treningstider</title>
+  <title>Vikåsen Volley</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
   <header>
@@ -37,31 +35,11 @@
   <main>
     <div id="upcoming-event"></div>
     <section class="about">
-      <h3>Treningstider i Vikåsenhallen:</h3>
-      <p>Mandager: <br><span class="indented-line">18:30 - 20:00</span></p>
-      <p>Torsdager: <br><span class="indented-line">19:30 - 21:30</span></p>
-      <p>Adresse: Vikåsen 26, 7054 Ranheim</p>
+      <h3>Kontaktinformasjon: </h3>
+      <p></p>
     </section>
-    <img src="Volleyball2.jpg" class="right-image" width="300" height="200">
+    <img src="Volleyball3.jpg" class="right-image" width="300" height="200">
   </main>
-
-  <div id="map"></div>
-  <script>
-    // Initialize the map
-    var map = L.map('map').setView([63.41339, 10.53176], 13);
-  
-    // Add the OpenStreetMap tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-      maxZoom: 18,
-    }).addTo(map);
-      // Define the marker coordinates
-    var markerCoordinates = [63.41339, 10.53176];
-
-      // Add a marker to the map
-    var marker = L.marker(markerCoordinates).addTo(map);
-  </script>
-  
   <footer>
     <div class="image-container2">
       <img src="logo.png" alt="Vikåsen Volley Logo">
@@ -70,4 +48,3 @@
 </body>
 <script src="upcoming-event.js"></script>
 </html>
-

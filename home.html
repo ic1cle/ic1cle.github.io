@@ -3,24 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Sigurd S. Osen">
+  <meta name="contact" content="sigsos1@gotmail.com"
+
   <title>Vikåsen Volley</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
   <header>
     <nav class="navbar">
         <div class="container">
-          <a href="home.html" class="logo">Vikåsen Volley</a>
+          <div class="image-container">
+            <img src="logo.png" alt="Vikåsen Volley Logo">
+          </div>
           <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="schedule.html">Schedule</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="home.html">Hjemmeside</a></li>
+            <li><a href="schedule.html">Treningstider</a></li>
+            <li><a href="contact.html">Kontaktinformasjon</a></li>
           </ul>
           <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+            <a href="home.html" class="bar"><i class="fas fa-home"></i></a>
+            <a href="schedule.html" class="bar"><i class="fas fa-calendar-day"></i></a>
+            <a href="contact.html" class="bar"><i class="fas fa-envelope"></i></a>
+          </div>          
           </div>
         </div>
       </nav>      
@@ -28,15 +35,17 @@
   <main>
     <div id="upcoming-event"></div>
     <section class="about">
-      <h3>About Us</h3>
-      <p>My Volleyball Club is a community of volleyball players of all ages and skill levels. We offer regular practices, clinics, and tournaments throughout the year, as well as social events and volunteer opportunities. Whether you're a beginner or an experienced player, we welcome you to join us!</p>
-      <a href="about.html" class="button">Learn More</a>
+      <h3>Om Oss</h3>
+      <p>Vikåsen Volley ble stiftet 9. oktober i 2003, men har hatt mix-aktiviter helt siden 2001. Vikåsen volley har hatt mange lag i aldersbestemte klasser gjennom årene, og har nå fire lag; GU19, GU17, JU17 og U13</p>
+      <p>Vi ønsker nå flere medlemer, så gjerne kontakt oss om du ønker og starte på volleyball.</p>
     </section>
+    <img src="Volleyball.jpg" class="right-image" width="300" height="200">
   </main>
   <footer>
-    <p>&copy; 2023 My Volleyball Club. All rights reserved.</p>
+    <div class="image-container2">
+      <img src="logo.png" alt="Vikåsen Volley Logo">
+    </div>
   </footer>
 </body>
-<script src="script.js"></script>
 <script src="upcoming-event.js"></script>
 </html>
