@@ -318,6 +318,37 @@ body {
   margin-right: auto;
   margin-bottom: 20px;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  color: #b2b2b2;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+
+a {
+  color: #b2b2b2;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
   
   /* Footer Styles */
   
