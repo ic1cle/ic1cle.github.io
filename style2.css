@@ -236,7 +236,6 @@ body {
   /* Main Content Styles */
   
   main {
-    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     display: flex; 
@@ -244,19 +243,13 @@ body {
     justify-content: space-between;
   }
 
-  .right-image {
-    margin-top: 40px;
-    margin-left: auto;
-    border-radius: 5%;
-  }
-  
   .promo, .about {
     background-color: rgb(20, 20, 20);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-top: 40px;
     margin-right: auto;
-    flex-basis: calc(60% - 10px);
+    flex-basis: calc(100% - 10px);
     border-radius: 5%;
   }
   
