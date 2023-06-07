@@ -311,6 +311,12 @@ body {
   margin-right: auto;
   margin-bottom: 20px;
 }
+
+nb {
+  color: #840000;
+  text-decoration: underline;
+  font-weight: 1000;
+}
   
   /* Footer Styles */
   
