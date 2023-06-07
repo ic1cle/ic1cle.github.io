@@ -321,7 +321,13 @@ body {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: 90%;
+}
+
+@media (max-width: 700px) {
+  table {
+    font-size: 70%; /* Adjust this value as needed */
+  }
 }
 
 th, td {
@@ -329,6 +335,7 @@ th, td {
   text-align: left;
   border-bottom: 1px solid #ddd;
   color: #b2b2b2;
+  text-size-adjust:inherit;
 }
 
 th {
