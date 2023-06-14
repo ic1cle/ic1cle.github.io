@@ -266,6 +266,12 @@ body {
     margin-left: auto;
     border-radius: 5%;
   }
+
+  @media (max-width: 900px) {
+    .right-image {
+        display: none;
+    }
+  }
   
   .promo, .about {
     background-color: rgb(20, 20, 20);
@@ -341,7 +347,7 @@ table {
   width: 90%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   table {
     font-size: 70%; /* Adjust this value as needed */
   }
