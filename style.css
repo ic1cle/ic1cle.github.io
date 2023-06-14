@@ -244,6 +244,23 @@ body {
     justify-content: space-between;
   }
 
+  d {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40em;
+}
+
+  d2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: rgb(97, 97, 97);
+}
+
   .right-image {
     margin-top: 40px;
     margin-left: auto;
