@@ -37,6 +37,19 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
   }
+
+  header::after {
+    content: "Vi arrangerer åpne treninger i uke 36 og 37! Kom møt oss på trening!";
+     margin: 0.05rem -9999rem;
+    /* add back negative margin value */
+    padding: 0.05rem 9999rem;
+    background: #1d1d1d;
+    color: #0066cc;
+    text-align:center;
+    display:block;
+    font-size: 20px;
+    margin-top: 80px;
+  }
   
   .navbar {
     background-color: #1b1a1a;
@@ -242,6 +255,7 @@ body {
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 30%;
   }
 
   d {
@@ -281,9 +295,15 @@ body {
     margin-right: auto;
     flex-basis: calc(60% - 10px);
     border-radius: 5%;
+    padding-bottom: 2%;
   }
   
   .promo h3, .about h3 {
+    margin-top: 0;
+    color: #b2b2b2;
+  }
+  
+  .promo h4, .about h4 {
     margin-top: 0;
     color: #b2b2b2;
   }
@@ -370,6 +390,11 @@ td:not(:last-child) {
 }
 
 a {
+  color: #b2b2b2;
+  text-decoration: underline;
+}
+
+ab {
   color: #b2b2b2;
   text-decoration: underline;
 }
