@@ -52,23 +52,6 @@
       <!-- <p>Adresse: Vikelvvegen 151, 7057 Jonsvatnet</p> -->
     </section>
   </main>
-
-  <div id="map" class="content"></div>
-  <script>
-    // Initialize the map
-    var map = L.map('map').setView([63.41339, 10.53176], 13);
-  
-    // Add the OpenStreetMap tile layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-      maxZoom: 18,
-    }).addTo(map);
-      // Define the marker coordinates
-    var markerCoordinates = [63.41339, 10.53176];
-
-      // Add a marker to the map
-    var marker = L.marker(markerCoordinates).addTo(map);
-  </script>
   
   <footer>
     <div class="image-container2">
