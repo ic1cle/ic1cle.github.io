@@ -1,72 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="egQj9IP3qCGkZ6O8S6LBn9xWC8EhkA2lMtfPUN8uyuo" />
+
+  <meta name="google-site-verification" content="egQj9IP3qCGkZ6O8S6LBn9xWC8EhkA2lMtfPUN8uyuo">
   <meta name="author" content="Sigurd S. Osen">
   <meta name="contact" content="sigsos1@gotmail.com">
 
   <title>Vikåsen Volley</title>
+
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
-  <link rel="stylesheet" href="style.css">  
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
 </head>
+<script>
+const currentPage = window.location.pathname.split("/").pop(); 
+const navItems = document.querySelectorAll(".list");
+
+navItems.forEach(item => {
+    const link = item.querySelector("a");
+    const href = link.getAttribute("href");
+    if (href === currentPage) {
+        navItems.forEach(li => li.classList.remove("active"));
+        item.classList.add("active");
+    }
+    link.addEventListener("click", () => {
+        navItems.forEach(li => li.classList.remove("active"));
+        item.classList.add("active");
+    });
+});
+</script>
+
 <body>
   <header>
-    <nav class="navbar">  
-        <div class="container">
-          <div class="image-container">
-            <img src="logo.png" alt="Vikåsen Volley Logo">
-          </div>
-          <ul class="nav-links">
-            <li><a href="index.html">Hjemmeside</a></li>            
-            <li><a href="contact.html">Kontaktinformasjon</a></li>
-            <li><a href="https://spond.com/discover/nb-no/clubs/1C2E9D0C26994AD6AE8083BA9E83A00C/vik%C3%A5senvolley">Spond klubb info</a></li>
-            <li><a href="https://www.facebook.com/groups/2368221573/" target="_blank">Facebook</a></li>
-            <li><a href="https://medlemskap.nif.no/482124?fbclid=IwAR08TRZ5JoPCWMRf0njfNq6xoa7vwry3BrzNH6B2iGWDMHyWoG3YPRttw7c" target="_blank">Bli&nbsp;Medlem</a></li>
-          </ul>
-          <div class="hamburger">
-            <a href="index.html" class="bar"><i class="fas fa-home"></i></a>
-            <a href="schedule.html" class="bar"><i class="fas fa-calendar-day"></i></a>
-            <a href="contact.html" class="bar"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.facebook.com/groups/2368221573/" target="_blank" class="bar"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://medlemskap.nif.no/482124?fbclid=IwAR08TRZ5JoPCWMRf0njfNq6xoa7vwry3BrzNH6B2iGWDMHyWoG3YPRttw7c" target="_blank" class="bar"><i class="fas fa-user-circle"></i></a>
-          </div>          
-          </div>
-        </div>
-      </nav>      
+    <img src="favicon.ico" class="nav-logo" alt="Vikåsen Volley Logo">
+
+    <div class="navigation">
+      <ul>
+        <li class="list active" style="--clr:#f44336;">
+          <a href="index.html">
+            <span class="icon"><i class="fas fa-home"></i></span>
+          </a>
+        </li>
+
+        <li class="list" style="--clr:#ffa117;">
+          <a href="schedule.html">
+            <span class="icon"><i class="fas fa-calendar-day"></i></span>
+          </a>
+        </li>
+
+        <li class="list" style="--clr:#0fc70f;">
+          <a href="contact.html">
+            <span class="icon"><i class="fas fa-envelope"></i></span>
+          </a>
+        </li>
+
+        <li class="list" style="--clr:#2196f3;">
+          <a href="https://www.facebook.com/groups/2368221573/" target="_blank">
+            <span class="icon"><i class="fab fa-facebook-square"></i></span>
+          </a>
+        </li>
+
+        <li class="list" style="--clr:#b145e9;">
+          <a href="https://club.spond.com/landing/signup/vikåsenvolley/form/F84BA8F6C46E4B29B3E1DDC98BE86416" target="_blank">
+            <span class="icon"><i class="fas fa-user-circle"></i></span>
+          </a>
+        </li>
+
+        <div class="indicator"></div>
+      </ul>
+    </div>
   </header>
+
+  <!-- MAIN CONTENT -->
   <main>
-    <!-- <div id="upcoming-event"></div> -->
+
+    <!-- ABOUT SECTION -->
     <section class="about">
-      <h3>Om Oss</h3>
-      <p>Vikåsen Volley ble stiftet 9. oktober i 2003, men har hatt mix-aktiviter helt siden 2001. Vikåsen volley har hatt mange lag i aldersbestemte klasser gjennom årene, og har nå lagene; minivolley, J/G15, J/G17, og J/G19. </p>
-      <p>Vi ønsker å få flere medlemmer, kontakt oss om du ønker å starte på volleyball. Du kan benytte email til leder/trener i klubben som du finner <a href="contact.html" target="_blank">her</a>.  </p>
-      
-      <p>Eller melde deg inn via Spond her <a href="https://club.spond.com/landing/signup/vikåsenvolley/form/F84BA8F6C46E4B29B3E1DDC98BE86416" target="_blank">Spond Innmelding </a>.    </p>
-      <p>Barn skal ha registrert foresatt (minst en) for at all klubb relatert informasjon skal mottas av foresatte. Admin kan ta kontakt for å finne rett gruppe og trenings parti </p>
-      <p>Pris for medlemskap er kr 100 per år, og treningsavgift varierer med alder. Dersom deltaker vil delta på kamper så er det en spiller lisens som også må dekkes. Dersom kostnaden er for høy så kan foresatte ta kontakt med klubb leder for å se om det kan finnes støtte ordninger slik at barnet kan delta </p>
-      
-      <p>Her er link til informasjon om aldersgrupper og spiller lisenser på NVBF sine sider <a href="https://volleyball.no/lisens-og-forsikring/#1611912230649-50fe8504-dc79" target="_blank"> volleyball.no </a> </p> 
-        <!--
-      <a href="https://medlemskap.nif.no/482124?fbclid=IwAR08TRZ5JoPCWMRf0njfNq6xoa7vwry3BrzNH6B2iGWDMHyWoG3YPRttw7c" target="_blank">Bli medlem her!</a>
-      -->
-    
+      <h3>Om Vikåsen Volley!</h3>
+
+      <p>Vikåsen Volley ble stiftet 9. oktober i 2003, men har hatt mix-aktiviter helt siden 2001. Vikåsen volley har hatt mange lag i aldersbestemte klasser gjennom årene, og har nå lagene; minivolley, J/G15, J/G17, og J/G19.</p>
+
+      <p>Vi ønsker å få flere medlemmer, kontakt oss om du ønsker å starte på volleyball. Du kan benytte email til leder/trener i klubben som du finner 
+        <a href="contact.html" target="_blank">her</a>.
+      </p>
+
+      <p>Meld deg inn via Spond:
+        <a href="https://club.spond.com/landing/signup/vikåsenvolley/form/F84BA8F6C46E4B29B3E1DDC98BE86416" target="_blank">
+          Spond Innmelding
+        </a>
+      </p>
+
+      <p>Barn skal ha registrert foresatt (minst en) for at all klubb relatert informasjon skal mottas av foresatte. Admin kan ta kontakt for å finne rett gruppe og treningsparti.</p>
+
+      <p>Pris for medlemskap er kr 100 per år, og treningsavgift varierer med alder. Dersom deltaker vil delta på kamper så er det en spillerlisens som også må dekkes. Dersom kostnaden er for høy så kan foresatte ta kontakt med klubb leder for støtteordninger.</p>
+
+      <p>Les mer om aldersgrupper og spillerlisenser på NVBF sine sider:
+        <a href="https://volleyball.no/lisens-og-forsikring/#1611912230649-50fe8504-dc79" target="_blank">
+          volleyball.no
+        </a>
+      </p>
     </section>
-    <img src="Volleyball.jpg" class="right-image" width="300" height="200">
+
+    <!-- SOCIAL MEDIA SECTION -->
     <section class="about">
       <h4>Følg oss på Sosiale Media</h4>
-      <a href="https://www.facebook.com/groups/2368221573/" target="_blank" class="bar"><i class="fab fa-facebook-square"></i> Facebook</a>
-      <p><span style="white-space: pre-line"></span></p>
-      <a href="https://www.instagram.com/vikaasen_volley/" target="_blank" class="bar"><i class="fab fa-instagram"></i> Instagram</a>
+
+      <a href="https://www.facebook.com/groups/2368221573/" target="_blank" class="bar">
+        <i class="fab fa-facebook-square"></i> Facebook
+      </a>
+
+      <p></p>
+
+      <a href="https://www.instagram.com/vikaasen_volley/" target="_blank" class="bar">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
     </section>
+
   </main>
+
+  <!-- FOOTER -->
   <footer>
     <div class="image-container2">
       <img src="logo.png" alt="Vikåsen Volley Logo">
     </div>
   </footer>
+
+  <!-- SCRIPTS -->
+  <script src="upcoming-event.js"></script>
+
+  <script>
+    const list = document.querySelectorAll(".list");
+    list.forEach(item => {
+      item.addEventListener("click", function() {
+        list.forEach(li => li.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  </script>
+
 </body>
-<script src="upcoming-event.js"></script>
 </html>

@@ -13,39 +13,76 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <!-- <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script> -->
 </head>
+<script>
+const currentPage = window.location.pathname.split("/").pop(); 
+const navItems = document.querySelectorAll(".list");
+
+navItems.forEach(item => {
+    const link = item.querySelector("a");
+    const href = link.getAttribute("href");
+
+    // Match exact page (index.html, schedule.html, contact.html)
+    if (href === currentPage) {
+        navItems.forEach(li => li.classList.remove("active"));
+        item.classList.add("active");
+    }
+
+    // External links (Facebook, Spond) stay inactive unless clicked
+    link.addEventListener("click", () => {
+        navItems.forEach(li => li.classList.remove("active"));
+        item.classList.add("active");
+    });
+});
+</script>
+
 <body>
   <header>
-    <nav class="navbar">
-        <div class="container">
-          <div class="image-container">
-            <img src="logo.png" alt="Vikåsen Volley Logo">
-          </div>
-          <ul class="nav-links">
-            <li><a href="index.html">Hjemmeside</a></li>
-            <li><a href="schedule.html">Treningstider</a></li>
-            <li><a href="contact.html">Kontaktinformasjon</a></li>
-            <li><a href="https://spond.com/discover/nb-no/clubs/1C2E9D0C26994AD6AE8083BA9E83A00C/vik%C3%A5senvolley">Spond klubb info</a></li>
-            <li><a href="https://www.facebook.com/groups/2368221573/" target="_blank">Facebook</a></li>
-            <li><a href="https://medlemskap.nif.no/482124?fbclid=IwAR08TRZ5JoPCWMRf0njfNq6xoa7vwry3BrzNH6B2iGWDMHyWoG3YPRttw7c" target="_blank">Bli&nbsp;Medlem</a></li>
-          </ul>
-          <div class="hamburger">
-            <a href="index.html" class="bar"><i class="fas fa-home"></i></a>
-            <a href="schedule.html" class="bar"><i class="fas fa-calendar-day"></i></a>
-            <a href="contact.html" class="bar"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.facebook.com/groups/2368221573/" target="_blank" class="bar"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://medlemskap.nif.no/482124?fbclid=IwAR08TRZ5JoPCWMRf0njfNq6xoa7vwry3BrzNH6B2iGWDMHyWoG3YPRttw7c" target="_blank" class="bar"><i class="fas fa-user-circle"></i></a>
-          </div>          
-          </div>
-        </div>
-      </nav>      
+    <img src="favicon.ico" class="nav-logo" alt="Vikåsen Volley Logo">
+
+    <div class="navigation">
+      <ul>
+        <li class="list" style="--clr:#f44336;">
+          <a href="index.html">
+            <span class="icon"><i class="fas fa-home"></i></span>
+          </a>
+        </li>
+
+        <li class="lis active" style="--clr:#ffa117;">
+          <a href="schedule.html">
+            <span class="icon"><i class="fas fa-calendar-day"></i></span>
+          </a>
+        </li>
+
+        <li class="list" style="--clr:#0fc70f;">
+          <a href="contact.html">
+            <span class="icon"><i class="fas fa-envelope"></i></span>
+          </a>
+        </li>
+
+        <li class="list" style="--clr:#2196f3;">
+          <a href="https://www.facebook.com/groups/2368221573/" target="_blank">
+            <span class="icon"><i class="fab fa-facebook-square"></i></span>
+          </a>
+        </li>
+
+        <li class="list" style="--clr:#b145e9;">
+          <a href="https://club.spond.com/landing/signup/vikåsenvolley/form/F84BA8F6C46E4B29B3E1DDC98BE86416" target="_blank">
+            <span class="icon"><i class="fas fa-user-circle"></i></span>
+          </a>
+        </li>
+
+        <div class="indicator"></div>
+      </ul>
+    </div>
   </header>
   <main>
-    <!-- <div id="upcoming-event"></div> -->
-    <section class="about">
       <!-- Sesong 1/9-30/4 -->
-     <a href="https://spond.com/discover/nb-no/clubs/1C2E9D0C26994AD6AE8083BA9E83A00C/vik%C3%A5senvolley">Spond klubb info</a>
-      <!--  -->
-    </section>
+     <div class="centered">
+    <a href="https://medlemskap.nif.no/482124" target="_blank" class="modern-btn">
+        <i class="fas fa-users"></i>
+        Spond Klubb Info
+    </a>
+</div>
     
     <section class="about"> 
       
@@ -82,6 +119,17 @@
     </div>
   </footer>
 </body>
-<script src="upcoming-event.js"></script>
+ <!-- SCRIPTS -->
+  <script src="upcoming-event.js"></script>
+
+  <script>
+    const list = document.querySelectorAll(".list");
+    list.forEach(item => {
+      item.addEventListener("click", function() {
+        list.forEach(li => li.classList.remove("active"));
+        this.classList.add("active");
+      });
+    });
+  </script>
 </html>
 
